@@ -1,4 +1,4 @@
-import { AppRegistry } from 'react-native';
-import App from './App';
+import { AppRegistry } from 'react-native'
+import ReactModoro from './app/index'
 
-AppRegistry.registerComponent('ReactModoro', () => App);
+AppRegistry.registerComponent('ReactModoro', () => ReactModoro)
