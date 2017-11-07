@@ -9,6 +9,6 @@ import { AppContainer } from 'containers'
 
 export default function ReactModoro () {
   return (
-    <AppContainer />
+    <AppContainer isAuthenticating/>
   )
 }
