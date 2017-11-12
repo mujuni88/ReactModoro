@@ -1,20 +1,24 @@
-import React                    from 'react'
-import PropTypes                from 'prop-types'
+import React from 'react'
+import PropTypes from 'prop-types'
 import { ReactModoroNavigator } from 'containers'
-import { View }                 from 'react-native'
-import { PreSplash }            from 'components'
+import { View } from 'react-native'
+import { PreSplash } from 'components'
+import { connect } from 'react-redux'
 
 AppContainer.propTypes = {
   isAuthenticating: PropTypes.bool.isRequired
 }
-export default function AppContainer ({isAuthenticating = true}) {
+function AppContainer ({ isAuthenticating = false }) {
   return (
-    <View style={{flex: 1}}>
-      {isAuthenticating 
-        ? <PreSplash />
-        : <ReactModoroNavigator /> 
-      }
+    <View style={{ flex: 1 }}>
+      {isAuthenticating ? <PreSplash /> : <ReactModoroNavigator />}
     </View>
   )
 }
 
+function mapStateToProps ({ authentication }) {
+  return {
+    isAuthenticating: authentication.isAuthenticating
+  }
+}
+export default connect(mapStateToProps)(AppContainer)

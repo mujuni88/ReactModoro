@@ -1,18 +1,16 @@
-import React, {Component} from 'react'
-import {NavigatorIOS, Text} from 'react-native'
-import { SplashContainer } from 'containers'
-
-console.log('SPLASH', SplashContainer)
+import React, { Component } from 'react'
+import { NavigatorIOS, Text } from 'react-native'
+import { SplashContainer, FooterTabsContainer } from 'containers'
 
 export default class ReactModoroNavigator extends Component {
-  render(){
+  render () {
     return (
       <NavigatorIOS
         initialRoute={{
-          component: SplashContainer,
+          component: FooterTabsContainer,
           title: 'Splash Screen'
         }}
-        style={{flex: 1}}
+        style={{ flex: 1 }}
       />
     )
   }

@@ -4,7 +4,8 @@
 	"private": true,
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest"
+		"test": "jest",
+		"clear-cache": "watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn install && yarn start -- --reset-cache"
 	},
 	"lint-staged": {
 		"linters": {
@@ -21,14 +22,21 @@
 		"react-native": "0.50.1",
 		"react-native-deprecated-custom-components": "^0.1.1",
 		"react-native-fbsdk": "^0.6.3",
+		"react-native-vector-icons": "^4.4.2",
+		"react-redux": "^5.0.6",
+		"redux": "^3.7.2",
+		"redux-thunk": "^2.2.0",
 		"styled-components": "^2.2.3",
 		"styled-tools": "^0.2.2"
 	},
 	"devDependencies": {
+		"babel-eslint": "^8.0.2",
 		"babel-jest": "21.2.0",
 		"babel-plugin-module-resolver": "^2.7.1",
 		"babel-preset-react-native": "4.0.0",
 		"babel-preset-react-native-stage-0": "^1.0.1",
+		"eslint": "^4.11.0",
+		"eslint-plugin-react": "^7.4.0",
 		"husky": "^0.14.3",
 		"jest": "21.2.1",
 		"lint-staged": "^4.3.0",

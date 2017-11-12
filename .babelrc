@@ -7,7 +7,9 @@
         "root": ["./app"],
         "alias":{
           "containers": "./containers",
-          "components": "./components"
+          "components": "./components",
+          "styles": "./styles",
+          "rdx":   "./rdx"
         }
       }
     ]
