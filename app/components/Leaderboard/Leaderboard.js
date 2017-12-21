@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components/native'
 import { prop } from 'styled-tools'
 import { Dimensions } from 'react-native'
+import { ReactModoroNavbar } from 'components'
 
 const { height } = Dimensions.get('window')
 
@@ -25,10 +26,12 @@ const Text = styled.Text`
 
 Leaderboard.propTypes = {
 }
+
 export default function Leaderboard (props) {
   const _height = height * 0.4 > 300 ? 300 : height * 0.4
   return (
     <Wrapper>
+      <ReactModoroNavbar />
       <Img height={_height} source={require('../../images/logo.jpg')} />
       <Text>Leaderboard</Text>
     </Wrapper>

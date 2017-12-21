@@ -8,8 +8,10 @@
         "alias":{
           "containers": "./containers",
           "components": "./components",
-          "styles": "./styles",
-          "rdx":   "./rdx"
+          "styles":     "./styles",
+          "rdx":        "./rdx",
+          "config":     "./config",
+          "api":        "./api"
         }
       }
     ]

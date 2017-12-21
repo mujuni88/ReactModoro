@@ -16,13 +16,17 @@
 		}
 	},
 	"dependencies": {
+		"firebase": "^4.6.2",
 		"polished": "^1.8.2",
 		"prop-types": "^15.6.0",
 		"react": "16.0.0",
 		"react-native": "0.50.1",
 		"react-native-deprecated-custom-components": "^0.1.1",
 		"react-native-fbsdk": "^0.6.3",
+		"react-native-navbar": "^2.1.0",
+		"react-native-slider": "^0.11.0",
 		"react-native-vector-icons": "^4.4.2",
+		"react-navigation": "^1.0.0-beta.19",
 		"react-redux": "^5.0.6",
 		"redux": "^3.7.2",
 		"redux-thunk": "^2.2.0",
@@ -42,7 +46,8 @@
 		"lint-staged": "^4.3.0",
 		"prettier": "^1.7.4",
 		"prettier-standard": "^7.0.3",
-		"react-test-renderer": "16.0.0"
+		"react-test-renderer": "16.0.0",
+		"redux-devtools-extension": "^2.13.2"
 	},
 	"jest": {
 		"preset": "react-native"

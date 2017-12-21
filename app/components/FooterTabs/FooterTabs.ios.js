@@ -38,9 +38,3 @@ export default function FooterTabs ({activeFooterTab, navigator, onTabSelect}) {
 
   )
 }
-
-const Text = styled.Text`
-  color: #0077cc;
-  margin-top: 100px;
-` 
-

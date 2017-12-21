@@ -1,14 +1,22 @@
-import React, {Component} from 'react'
-import { Splash } from 'components'
+import React, {Component}         from 'react'
+import PropTypes                  from 'prop-types'
+import { Splash }                 from 'components'
+import { handleAuthWithFirebase } from 'rdx/modules/authentication'
+import { connect }                from 'react-redux'
 
-export default class SplashContainer extends Component {
+class SplashContainer extends Component {
+
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired
+  }
+
   handleLoginFinished = (error, result) => {
     if(error){
       console.warn('Error in handleLoginFinished: ', error)
     } else if(result.isCancelled === true){
       console.log('Auth cancelled')
     } else {
-      console.log('Auth successful')
+      this.props.dispatch(handleAuthWithFirebase())
     }
 
   }
@@ -18,3 +26,5 @@ export default class SplashContainer extends Component {
     )
   }
 }
+
+export default connect()(SplashContainer)
